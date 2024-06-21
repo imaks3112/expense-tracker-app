@@ -1,0 +1,20 @@
+{
+  "expenses": [
+    {
+      "id": "4270",
+      "description": "This is expenses",
+      "amount": 12345,
+      "date": "2024-06-28"
+    },
+    {
+      "id": "17fe",
+      "description": "This is expenses 1",
+      "amount": 123451,
+      "date": "2024-06-28"
+    }
+  ],
+  "profile": {
+    "name": "Akshay R Lankeshwar",
+    "email": "lankeshwarakshay3112@gmail.com"
+  }
+}

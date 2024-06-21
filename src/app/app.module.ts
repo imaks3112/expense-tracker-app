@@ -10,6 +10,7 @@ import { ExpenseFormComponent } from './components/expense-form/expense-form.com
 import { ExpenseListComponent } from './components/expense-list/expense-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserProfileService } from './services/user-profile.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UserProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

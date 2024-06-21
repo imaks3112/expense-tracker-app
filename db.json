@@ -17,7 +17,8 @@
       "id": "4b20",
       "description": "This is expenses 2",
       "amount": 123451,
-      "date": "2024-06-28"
+      "date": "2024-06-28",
+      "isEditing": true
     },
     {
       "id": "ff46",
@@ -32,12 +33,6 @@
       "date": "2024-06-14"
     },
     {
-      "id": "1839",
-      "description": "AKSHAY",
-      "amount": 12,
-      "date": null
-    },
-    {
       "id": "6c47",
       "description": "Samiksha Akshay Lankeshwar",
       "amount": 3112,
@@ -48,6 +43,18 @@
       "description": "Samiksha Akshay Lankeshwar",
       "amount": 3112,
       "date": "2024-06-27"
+    },
+    {
+      "id": "344f",
+      "description": "Akshay",
+      "amount": 1,
+      "date": null
+    },
+    {
+      "id": "de1e",
+      "description": "akalkssssssssssssssssssssssss",
+      "amount": 3012,
+      "date": "2024-06-28"
     }
   ],
   "profile": {

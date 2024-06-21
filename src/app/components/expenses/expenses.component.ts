@@ -24,7 +24,7 @@ export class ExpensesComponent {
   }
 
   async addExpense(expense: Expense): Promise<any> {
-    if (!this.updatedData.isEditing) {
+    if (!this.updatedData?.isEditing) {
       await this.expenseService.addExpense(expense);
     }
     else {

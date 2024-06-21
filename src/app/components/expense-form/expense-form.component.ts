@@ -38,12 +38,13 @@ export class ExpenseFormComponent implements OnInit, OnChanges {
   }
 
   onSubmit(): void {
-    if (this.isEditing) {
+    if (this.updatedData?.isEditing) {
       this.updateExpense.emit(this.expensesForm.value);
+      this.updatedData.isEditing = false;
     } else {
       this.addExpense.emit(this.expensesForm.value);
-      this.expensesForm.reset() // Clear form after adding
     }
+    this.expensesForm.reset() // Clear form after adding
   }
 
   setExpensesForm() {

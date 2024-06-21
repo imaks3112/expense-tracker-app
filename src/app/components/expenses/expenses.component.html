@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Expense Tracker</h1>
+
+    <!-- Add Expense Form -->
+     <div class="container">
+         <app-expense-form (addExpense)="addExpense($event)"></app-expense-form>
+     </div>
+
+    <!-- Expense List -->
+     <ng-container *ngIf="expenses.length">
+         <app-expense-list [expenses]="expenses" (deleteExpense)="deleteExpense($event)"
+         (editExpense)="editExpense($event.expense, $event.index)"
+         ></app-expense-list>
+     </ng-container>
+     
+</div>

@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-7">
+            <h1 class="text-center mb-4">User Profile</h1>
+            <div class="card p-3 py-4" *ngIf="!isEditUser">
+                <div class="text-center">
+                    <img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-circle">
+                </div>
+                
+                <div class="text-center mt-3">
+                    <h5 class="mt-2 mb-0">Name: {{ userProfile.name }}</h5>
+                    
+                    <div class="px-4 mt-1">
+                        <p class="fonts">Email: {{ userProfile.email }} </p>    
+                    </div>
+                
+                    <div class="buttons">
+                        <button class="btn btn-outline-primary px-4" (click)="clickUser()">Edit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="isEditUser">    
+                <form [formGroup]="userForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="name" class="form-control" id="name" formControlName="name">
+                      </div>
+
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp"formControlName="email">
+                    </div>                  
+              
+                    <button type="submit" class="btn btn-primary mx-2" (click)="editUserRecord()">Submit</button>
+                    <button type="submit" class="btn mx-2" (click)="cancel()">Cancel</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -22,13 +22,13 @@ export class ExpensesComponent {
     });
   }
 
-  addExpense(expense: Expense): void {
-    this.expenseService.addExpense(expense);
-    this.loadExpenses();
+  async addExpense(expense: Expense): Promise<any> {
+    await this.expenseService.addExpense(expense);
+    await this.loadExpenses();
   }
 
-  deleteExpense(index: number): void {
-    this.expenseService.deleteExpense(index);
+  deleteExpense(expense: Expense): void {
+    this.expenseService.deleteExpense(expense);
     this.loadExpenses();
   }
 

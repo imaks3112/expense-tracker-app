@@ -33,8 +33,6 @@ export class ExpenseFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('editing ===>>', this.isEditing);
-    
     if (this.isEditing) {
       this.updateExpense.emit(this.expensesForm.value);
     } else {

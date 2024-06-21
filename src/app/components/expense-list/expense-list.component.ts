@@ -9,7 +9,7 @@ import { Expense } from 'src/app/models/expense';
 })
 export class ExpenseListComponent {
   @Input() expenses: Expense[];
-  @Output() deleteExpense: EventEmitter<number> = new EventEmitter();
+  @Output() deleteExpense: EventEmitter<any> = new EventEmitter();
   @Output() editExpense: EventEmitter<{ expense: Expense, index: number }> = new EventEmitter();
 
   constructor() { }
@@ -17,8 +17,8 @@ export class ExpenseListComponent {
   ngOnInit(): void {
   }
 
-  onDelete(index: number): void {
-    this.deleteExpense.emit(index);
+  onDelete(expense: any): void {
+    this.deleteExpense.emit(expense);
   }
 
   onEdit(expense: Expense, index: number): void {

@@ -9,6 +9,7 @@ import { Expense } from '../../models/expense';
 })
 export class ExpensesComponent {
   expenses: Expense[] = [];
+  updatedData;
 
   constructor(private expenseService: ExpenseService) {}
 
@@ -23,7 +24,12 @@ export class ExpensesComponent {
   }
 
   async addExpense(expense: Expense): Promise<any> {
-    await this.expenseService.addExpense(expense);
+    if (!this.updatedData.isEditing) {
+      await this.expenseService.addExpense(expense);
+    }
+    else {
+      this.expenseService.updateExpense(this.updatedData);
+    }
     await this.loadExpenses();
   }
 
@@ -33,7 +39,7 @@ export class ExpensesComponent {
   }
 
   editExpense(updatedExpense: any, index: any): void {
-    this.expenseService.updateExpense(updatedExpense, index);
+    this.updatedData = updatedExpense;
     this.loadExpenses();
   }
 }

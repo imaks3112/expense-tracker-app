@@ -4,7 +4,8 @@
       "id": "4270",
       "description": "This is expenses",
       "amount": 12345,
-      "date": "2024-06-28"
+      "date": "2024-06-28",
+      "isEditing": true
     },
     {
       "id": "17fe",
@@ -38,6 +39,12 @@
     },
     {
       "id": "6c47",
+      "description": "Samiksha Akshay Lankeshwar",
+      "amount": 3112,
+      "date": "2024-06-27"
+    },
+    {
+      "id": "ee0d",
       "description": "Samiksha Akshay Lankeshwar",
       "amount": 3112,
       "date": "2024-06-27"

@@ -26,8 +26,7 @@ export class ExpenseService {
     return this.http.delete(url).subscribe(ele => ele);
   }
 
-  updateExpense(updatedExpense: Expense, index: number): any {
-    this.expenses[index] = updatedExpense;
+  updateExpense(updatedExpense: any): any {
     const url = `http://localhost:3000/expenses/${updatedExpense.id}`;
     return this.http.put(url, updatedExpense).subscribe(ele => ele);
   }

@@ -20,5 +20,5 @@
       </div>
     </div>
   
-    <button type="submit" class="btn btn-primary my-3" (click)="onSubmit()">{{ isEditing ? 'Update Expense' : 'Add Expense' }}</button>
+    <button type="submit" class="btn btn-primary my-3" (click)="onSubmit()">{{ updatedData?.isEditing ? 'Update Expense' : 'Add Expense' }}</button>
   </form>

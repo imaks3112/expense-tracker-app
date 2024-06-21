@@ -3,7 +3,7 @@
 
     <!-- Add Expense Form -->
      <div class="container">
-         <app-expense-form (addExpense)="addExpense($event)"></app-expense-form>
+         <app-expense-form (addExpense)="addExpense($event)" [updatedData]="updatedData"></app-expense-form>
      </div>
 
     <!-- Expense List -->

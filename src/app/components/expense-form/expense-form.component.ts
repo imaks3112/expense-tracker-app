@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Expense } from 'src/app/models/expense';
 
@@ -7,8 +7,9 @@ import { Expense } from 'src/app/models/expense';
   templateUrl: './expense-form.component.html',
   styleUrls: ['./expense-form.component.scss']
 })
-export class ExpenseFormComponent implements OnInit {
+export class ExpenseFormComponent implements OnInit, OnChanges {
   @Input() expense: Expense; // Input expense object for editing
+  @Input() updatedData;
   @Output() addExpense: EventEmitter<Expense> = new EventEmitter();
   @Output() updateExpense: EventEmitter<Expense> = new EventEmitter();
 
@@ -21,15 +22,19 @@ export class ExpenseFormComponent implements OnInit {
     this.createExpensesForm();
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.updatedData?.id) {
+      this.setExpensesForm();
+    }
+  }
   createExpensesForm() {
     this.expensesForm = this.fb.group({
       description: '',
       amount: null,
       date: ''
     });
-    if (this.expense) {
-      this.setExpensesForm();
-    }
+    console.log('ass', this.expense)
+  
   }
 
   onSubmit(): void {
@@ -42,6 +47,6 @@ export class ExpenseFormComponent implements OnInit {
   }
 
   setExpensesForm() {
-    this.expensesForm.setValue(this.expensesForm);
+    this.expensesForm.patchValue(this.updatedData);
   }
 }

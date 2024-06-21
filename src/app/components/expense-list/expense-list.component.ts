@@ -22,6 +22,7 @@ export class ExpenseListComponent {
   }
 
   onEdit(expense: Expense, index: number): void {
+    expense.isEditing = true;
     this.editExpense.emit({ expense, index });
   }
 }

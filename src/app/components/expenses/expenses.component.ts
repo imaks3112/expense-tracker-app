@@ -33,13 +33,13 @@ export class ExpensesComponent {
     await this.loadExpenses();
   }
 
-  deleteExpense(expense: Expense): void {
-    this.expenseService.deleteExpense(expense);
-    this.loadExpenses();
+  async deleteExpense(expense: Expense): Promise<any> {
+    await this.expenseService.deleteExpense(expense);
+    await this.loadExpenses();
   }
 
-  editExpense(updatedExpense: any, index: any): void {
+  async editExpense(updatedExpense: any, index: any): Promise<any> {
     this.updatedData = updatedExpense;
-    this.loadExpenses();
+    await this.loadExpenses();
   }
 }

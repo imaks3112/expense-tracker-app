@@ -33,7 +33,6 @@ export class ExpenseFormComponent implements OnInit, OnChanges {
       amount: null,
       date: ''
     });
-    console.log('ass', this.expense)
   
   }
 

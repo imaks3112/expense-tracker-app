@@ -6,55 +6,6 @@
       "amount": 12345,
       "date": "2024-06-28",
       "isEditing": true
-    },
-    {
-      "id": "17fe",
-      "description": "This is expenses 1",
-      "amount": 123451,
-      "date": "2024-06-28"
-    },
-    {
-      "id": "4b20",
-      "description": "This is expenses 2",
-      "amount": 123451,
-      "date": "2024-06-28",
-      "isEditing": true
-    },
-    {
-      "id": "ff46",
-      "description": "This is expenses 2",
-      "amount": 123451,
-      "date": "2024-06-28"
-    },
-    {
-      "id": "8c11",
-      "description": "akalkssssssssssssssssssssssss",
-      "amount": 3112,
-      "date": "2024-06-14"
-    },
-    {
-      "id": "6c47",
-      "description": "Samiksha Akshay Lankeshwar",
-      "amount": 3112,
-      "date": "2024-06-27"
-    },
-    {
-      "id": "ee0d",
-      "description": "Samiksha Akshay Lankeshwar",
-      "amount": 3112,
-      "date": "2024-06-27"
-    },
-    {
-      "id": "344f",
-      "description": "Akshay",
-      "amount": 1,
-      "date": null
-    },
-    {
-      "id": "de1e",
-      "description": "akalkssssssssssssssssssssssss",
-      "amount": 3012,
-      "date": "2024-06-28"
     }
   ],
   "profile": {
